@@ -1,0 +1,14 @@
+<%= form_for(@task) do |t| %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <br>
+  <%= t.label :details %>
+  <%= t.text_area :details %>
+  <br>
+  <%= t.radio_button :completed, true, :checked => true %>
+  <%= label :completed_true, 'completed' %>
+  <%= t.radio_button :completed, false %>
+  <%= label :completed_false, 'To Do' %>
+  <br>
+  <%= t.submit %>
+<% end %>
